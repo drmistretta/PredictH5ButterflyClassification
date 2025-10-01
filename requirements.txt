@@ -3,7 +3,6 @@ numpy
 tensorflow
 keras
 pillow
-sys
 subprocess
 importlib
 base64
