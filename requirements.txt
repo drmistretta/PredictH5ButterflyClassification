@@ -4,7 +4,6 @@ tensorflow
 keras
 pillow
 importlib
-base64
 scikit-learn==1.7.0
 Authlib==1.5.2
 google-auth==2.39.0
