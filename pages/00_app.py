@@ -3,8 +3,6 @@ import numpy as np
 import tensorflow as tf
 from keras.applications.MobileNetV2 import preprocess_input
 from PIL import Image
-import sys
-import subprocess
 import importlib
 import base64
 import requests
