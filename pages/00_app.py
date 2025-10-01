@@ -1,9 +1,7 @@
 import streamlit as st
 import numpy as np
 import tensorflow as tf
-import keras
-from keras.applications.MobileNetV2 
-import preprocess_input
+from keras.applications.mobilenet_v2 import preprocess_input
 from PIL import Image
 import importlib
 import requests
