@@ -3,7 +3,6 @@ numpy
 tensorflow
 keras
 pillow
-subprocess
 importlib
 base64
 scikit-learn==1.7.0
