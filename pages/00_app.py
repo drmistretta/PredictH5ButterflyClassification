@@ -4,7 +4,6 @@ import tensorflow as tf
 from keras.applications.MobileNetV2 import preprocess_input
 from PIL import Image
 import importlib
-import base64
 import requests
 
 
