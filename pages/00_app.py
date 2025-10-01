@@ -40,7 +40,7 @@ def prediction(modelname,sampleimage,IMG_SIZE=(224,224)):
 st.title=("H5 Model Butterfly Classifier")
 
 st.image(
-    "https://unsplash.com/photos/orange-buttefly-mC2mAodvrws", 
+    "https://unsplash.com/photos/monarch-butterfly-perched-on-yellow-flower-in-close-up-photography-during-daytime-AtJqR1AAkxY", 
     caption = "Butterfly")
 
 #about the web app
