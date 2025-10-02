@@ -7,7 +7,7 @@ import importlib
 import requests
 
 
-def prediction(modelname,sampleimage,IMG_SIZE=(224,224)):
+def prediction(modelname,sample_image,IMG_SIZE=(224,224)):
     #labels
     labels = ["ADONIS","NormalAFRICAN_GIANT_SWALLOWTAIL","AMERICAN_SNOOT","AN_88","APPOLLO","ATALA","BANDED_ORANGE_HELICONIAN",
     "BANDED_PEACOCK","BECKERS_WHITE","BLACK_HAIRSTREAK","BLUE_MORPHO","BLUE_SPOTTED_CROW","BROWN_SIPROETA","CABBAGE_WHITE","CAIRNS_BIRDWING",
