@@ -107,8 +107,8 @@ with tab2:
 
         #displaying the predicted label
         st.success("Your Classification is **{}**".format(label))
-            if st.success:
-                if st.button("Upload Image"):
-                    upload_file(client, image, label, st.user.email)
+        if st.success:
+            if st.button("Upload Image"):
+                upload_file(client, image, label, st.user.email)
 
 
