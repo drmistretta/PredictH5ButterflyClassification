@@ -5,6 +5,20 @@ from keras.applications.mobilenet_v2 import preprocess_input
 from PIL import Image
 import importlib
 import requests
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from upload import upload_file, record_logo_entry
+from supabase import Client, create_client
+import io
+
+
+if not st.user.is_logged_in:
+    st.error("Please log in to access the App")
+    st.stop()
+
+
+client = create_client(st.secrets["SUPABASE_URL"], st.secrets["SUPABASE_KEY"])
 
 
 def prediction(modelname,sample_image,IMG_SIZE=(224,224)):
@@ -75,7 +89,10 @@ with tab1:
             label = prediction("best_model_saved.h5", image)
 
             #displaying the predicted label
-            st.subheader("Your Classification is **{}**".format(label))
+            st.success("Your Classification is **{}**".format(label))
+            if st.success:
+                if st.button("Upload Image"):
+                    upload_file(client, image, label, st.user.email)
 
 with tab2:
     #camera input
@@ -89,6 +106,9 @@ with tab2:
         label = prediction("best_model_saved.h5", cam_image)
 
         #displaying the predicted label
-        st.subheader("Your Classification is **{}**".format(label))
+        st.success("Your Classification is **{}**".format(label))
+            if st.success:
+                if st.button("Upload Image"):
+                    upload_file(client, image, label, st.user.email)
 
 
